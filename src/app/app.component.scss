@@ -28,7 +28,6 @@
     border-top: 1px solid $primary-3;
     background: $dark-1;
     transition: 0.5s;
-    // background: linear-gradient(#010006, #010006e1, #0100068a, #0100060c);
 
     nav {
       width: 100%;
@@ -91,6 +90,7 @@
 
   footer {
     grid-area: footer;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
