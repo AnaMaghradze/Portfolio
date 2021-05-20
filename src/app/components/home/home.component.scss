@@ -1,0 +1,81 @@
+@import "../../../styles/index.scss";
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.home {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $dark-1;
+
+  div {
+    padding: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      margin: 10px 0;
+      font-weight: 500;
+      color: $primary-3;
+      font-family: Poppins;
+      font-size: calc(30px + 60 * ((100vw - 300px) / (1600 - 300)));
+      cursor: context-menu;
+    }
+
+    h2 {
+      width: fit-content;
+      min-width: fit-content;
+      margin: 10px 0;
+      @include text-style(36px, 400, $primary-1);
+      font-size: calc(16px + 40 * ((100vw - 300px) / (1600 - 300)));
+      cursor: context-menu;
+      span {
+        padding: 0 8px;
+        @include text-style(36px, 400, $light-1, Poppins);
+        font-size: calc(16px + 40 * ((100vw - 300px) / (1600 - 300)));
+      }
+    }
+    // contact me button
+    a {
+      margin: 20px 0;
+      padding: 10px 36px 10px 24px;
+      background: none;
+      border-radius: 2px;
+      border: 1px solid $light-1;
+      outline: none;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include text-style(36px, 400, $primary-2, Poppins);
+      font-size: calc(16px + 20 * ((100vw - 300px) / (1600 - 300)));
+      cursor: pointer;
+      position: relative;
+      transition: 0.5s;
+
+      i {
+        font-size: 74px;
+        color: $primary-3;
+        position: absolute;
+        top: 42%;
+        right: -56px;
+        transform: translate(-50%, 0);
+        transition: 0.5s;
+      }
+
+      &:hover {
+        border: 1px solid $primary-2;
+        i {
+          color: $primary-1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="projects">
+  <div class="header">
+    <h1>Some Of <span>My Projects</span><span>.</span></h1>
+  </div>
+  <div class="main">
+    <div class="projects-wrapper" [@listAnimation]="projects.length">
+      <div *ngFor="let project of projects">
+        <app-project [project]="project"></app-project>
+      </div>
+    </div>
+  </div>
+</div>

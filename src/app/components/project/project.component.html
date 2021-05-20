@@ -1,0 +1,12 @@
+<div class="project">
+  <div class="circle-wrapper">
+    <div class="circle"></div>
+  </div>
+  <div class="project-frame">
+    <h3>{{ project.name }}</h3>
+    <div>
+      <span *ngFor="let item of project.toolsAndLanguages"> {{ item }} </span>
+    </div>
+    <button mat-button (click)="openDialog(project)">View Project</button>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+  <header [ngClass]="{ 'toggle-header': navState }">
+    <!-- navigation -->
+    <nav>
+      <div class="name-abbreviation">
+        <a
+          routerLink="portfolio"
+          routerLinkActive="active"
+          (click)="navState = false"
+          ><span>.</span>this</a
+        >
+      </div>
+      <div class="nav-links" [ngClass]="navState ? 'nav-links' : 'nav-hidden'">
+        <a
+          routerLink="about"
+          routerLinkActive="active"
+          (click)="navState = false"
+          ><span>.</span>about</a
+        >
+        <a
+          routerLink="projects"
+          routerLinkActive="active"
+          (click)="navState = false"
+          ><span>.</span>projects</a
+        >
+        <a
+          routerLink="contact"
+          routerLinkActive="active"
+          (click)="navState = false"
+          ><span>.</span>contact</a
+        >
+      </div>
+      <div class="nav-toggle" (click)="navState = !navState">
+        <i class="las la-bars"></i>
+      </div>
+    </nav>
+  </header>
+   <!-- content -->
+  <main>   
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <h5>&copy; Ana Maghradze</h5>
+  </footer>
+  <!-- contacts (linkedin, github, facebook)-->
+  <app-contact-list
+    style="position: fixed; bottom: 10px; left: 10px"
+  ></app-contact-list>
+</div>

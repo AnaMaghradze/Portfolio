@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/index.scss';
+@import './styles/reset.scss';
+@import './styles/text-styles.scss';
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background: $dark-1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    &::selection{
+        background: $primary-3;
+    }
+}
+

@@ -1,0 +1,210 @@
+@import "../../../styles/index.scss";
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.about {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background: $dark-1;
+
+  .header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 10px 0 80px;
+
+    h1 {
+      text-align: center;
+      @include text-style(30px, 500, $light-1, Poppins);
+      font-size: calc(16px + 20 * ((100vw - 300px) / (1600 - 300)));
+      span:nth-of-type(1) {
+        color: $primary-2;
+      }
+      span:nth-of-type(2) {
+        @include text-style(56px, 500, $primary-1, Poppins);
+      }
+    }
+  }
+
+  .main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px 0px 30px 70px;
+      border-left: 1px solid $primary-3;
+
+      p:first-of-type {
+        line-height: 36px;
+        @include text-style(30px, 500, $primary-3, Poppins);
+        cursor: context-menu;
+      }
+
+      p:not(p:first-of-type) {
+        line-height: 36px;
+        @include text-style(20px, 400, $light-1, Poppins);
+        cursor: context-menu;
+      }
+
+      span {
+        padding: 0 8px;
+        @include text-style(36px, 500, $primary-1, Poppins);
+      }
+
+      // Resume button
+      a {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        padding: 8px 36px 8px 10px;
+        background: none;
+        border-radius: 2px;
+        border: 1px solid $light-1;
+        outline: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include text-style(20px, 400, $primary-2, Poppins);
+        cursor: pointer;
+        position: relative;
+        transition: 0.5s;
+
+        i:first-of-type {
+          font-size: 36px;
+          margin-right: 6px;
+        }
+        i:nth-of-type(2) {
+          font-size: 65px;
+          color: $primary-3;
+          position: absolute;
+          top: 40%;
+          right: -12px;
+          transition: 0.5s;
+        }
+
+        &:hover {
+          border: 1px solid $primary-2;
+          i:nth-of-type(2) {
+            color: $primary-1;
+          }
+        }
+      }
+    }
+  }
+
+  // competencies
+  .footer {
+    grid-area: footer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    & > div {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .competencies-header {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: $light-1;
+        padding: 0 0 20px 50px;
+        @include text-style(20px, 400, $light-2, Poppins);
+      }
+      .competencies-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        span {
+          display: block;
+          height: fit-content;
+          padding: 15px 0;
+          width: 150px;
+          text-align: center;
+          margin: 0 10px 20px;
+          border-radius: 3px;
+          border: 1px solid $light-2;
+          @include text-style(20px, 400, $light-1, Poppins);
+          cursor: context-menu;
+          transition: 0.5s;
+          &:hover {
+            color: $light-1;
+            border: 1px solid $light-1;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .header h1 {
+      font-size: 30px;
+    }
+    .main div {
+      width: 80%;
+      padding: 10px 0px 20px 30px;
+    }
+    .footer div {
+      width: 80%;
+      .competencies-header {
+        padding: 0 0 20px 5px;
+      }
+      .competencies-list {
+        display: flex;
+        justify-content: center;
+        span {
+          margin: 0 3px 5px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .main div {
+      padding: 10px 15px;
+      border: none;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p{
+        text-align: center;
+      }
+      p:first-of-type {
+        font-size: 24px;
+      }
+    }
+      .footer div > .competencies-header {
+        display: flex;
+        justify-content: center;
+    }
+  }
+}

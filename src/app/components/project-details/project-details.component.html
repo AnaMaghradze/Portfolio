@@ -1,0 +1,19 @@
+<div class="project-details">
+  <div class="mat-header-container">
+    <h1 mat-dialog-title style="padding: 0">{{ name }}</h1>
+    <button mat-button mat-dialog-close>
+      <i class="las la-times"></i>
+    </button>
+  </div>
+  <div mat-dialog-content class="mat-content-container">
+    <p>
+      {{ description }}
+    </p>
+    <div *ngFor="let img of images" class="project-images">
+      <img [src]="'../../../assets/images/' + img" alt="Project Image"/>
+    </div>
+  </div>
+  <div mat-dialog-actions class="mat-footer-container">
+    <a [href]="src" target="_blank"> <i class="lab la-github"></i> </a>
+  </div>
+</div>
