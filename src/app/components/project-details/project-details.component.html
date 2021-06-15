@@ -6,9 +6,11 @@
     </button>
   </div>
   <div mat-dialog-content class="mat-content-container">
-    <p>
-      {{ description }}
-    </p>
+    <ng-container *ngFor="let paragraph of description">
+      <p>
+        {{ paragraph }}
+      </p>
+    </ng-container>
     <div *ngFor="let img of images" class="project-images">
       <img [src]="'/Portfolio/assets/images/' + img" alt="Project Image"/>
     </div>

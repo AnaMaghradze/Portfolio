@@ -11,8 +11,38 @@ import { Project } from 'src/app/shared/interfaces/project.interface';
 export class ProjectsComponent {
   projects: Project[] = [
     {
+      name: 'Task Manager',
+      description: [
+        `The Task Manager is a simple Angular project that consists of two main pages. 
+        On the authentication page, users can sign in or create a new account. 
+        Once registered, the users can sign in and navigate to the home page.`,
+        `On the Task Manager home page, the users can create, update, or delete lists, 
+        add tasks to the list, mark them as done or todo, or remove them from the list. 
+        Users can also filter tasks according to their status (done, todo).`,
+      ],
+      toolsAndLanguages: [
+        'Angular',
+        'TypeScript',
+        'JavaScript',
+        'HTML5',
+        'CSS',
+        'SCSS',
+        'RxJS',
+      ],
+      src: 'https://github.com/AnaMaghradze/task-manager',
+      images: [
+        'tm-home-light.jpg',
+        'tm-home-dark.jpg',
+        'tm-sign-in.jpg',
+        'tm-sign-up.jpg',
+        'tm-home-light.jpg',
+        'tm-sign-in-mobile.jpg',
+        'tm-home-mobile-light.jpg',
+      ],
+    },
+    {
       name: 'My First Project',
-      description: `The project is designed with pure HTML, CSS and SCSS.`,
+      description: [`The project is designed with pure HTML, CSS and SCSS.`],
       toolsAndLanguages: ['HTML5', 'CSS', 'SCSS'],
       src: 'https://github.com/AnaMaghradze/personal-project-html-and-css',
       images: [
@@ -26,20 +56,6 @@ export class ProjectsComponent {
         'project-1-img-8.jpg',
         'project-1-img-9.jpg',
       ],
-    },
-    {
-      name: 'Chat Application',
-      description: 'Coming Soon...',
-      toolsAndLanguages: [
-        'Angular',
-        'TypeScript',
-        'NodeJS',
-        'WebSockets',
-        'HTML5',
-        'SCSS',
-      ],
-      src: '',
-      images: [],
     },
   ];
 }

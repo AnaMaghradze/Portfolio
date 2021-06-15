@@ -13,7 +13,7 @@ import { Project } from 'src/app/shared/interfaces/project.interface';
 })
 export class ProjectDetailsComponent {
   name: string;
-  description: string;
+  description: string[];
   images: string[] | undefined;
   src: string | undefined;
 
