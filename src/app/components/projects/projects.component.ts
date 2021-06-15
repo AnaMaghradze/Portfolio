@@ -31,13 +31,11 @@ export class ProjectsComponent {
       ],
       src: 'https://github.com/AnaMaghradze/task-manager',
       images: [
-        'tm-home-light.jpg',
-        'tm-home-dark.jpg',
-        'tm-sign-in.jpg',
-        'tm-sign-up.jpg',
-        'tm-home-light.jpg',
-        'tm-sign-in-mobile.jpg',
-        'tm-home-mobile-light.jpg',
+        'tm-signin.png',
+        'tm-signup.png',
+        'tm-home.png',
+        'tm-home-dark.png',
+        'tm-mobile.png'
       ],
     },
     {
