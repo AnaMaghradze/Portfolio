@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { listAnimation } from 'src/app/shared/animations/listAnimation';
-import { Project } from 'src/app/shared/interfaces/project.interface';
+import {Component} from '@angular/core';
+import {listAnimation} from 'src/app/shared/animations/listAnimation';
+import {Project} from 'src/app/shared/interfaces/project.interface';
 
 @Component({
   selector: 'app-projects',
@@ -11,13 +11,31 @@ import { Project } from 'src/app/shared/interfaces/project.interface';
 export class ProjectsComponent {
   projects: Project[] = [
     {
+      name: 'GitHub Users',
+      description: [`A single page application for displaying and searching GitHub users using GitHub public API.`],
+      toolsAndLanguages: [
+        'Angular',
+        'TypeScript',
+        'JavaScript',
+        'HTML5',
+        'CSS',
+        'SCSS',
+        'RxJS',
+      ],
+      src: 'https://anamaghradze.github.io/github-users/users',
+      images: [
+        'gh-users-1.png',
+        'gh-users-2.png',
+      ],
+    },
+    {
       name: 'Task Manager',
       description: [
-        `The Task Manager is a simple Angular project that consists of two main pages. 
-        On the authentication page, users can sign in or create a new account. 
+        `The Task Manager is a simple Angular project that consists of two main pages.
+        On the authentication page, users can sign in or create a new account.
         Once registered, the users can sign in and navigate to the home page.`,
-        `On the Task Manager home page, the users can create, update, or delete lists, 
-        add tasks to the list, mark them as done or todo, or remove them from the list. 
+        `On the Task Manager home page, the users can create, update, or delete lists,
+        add tasks to the list, mark them as done or todo, or remove them from the list.
         Users can also filter tasks according to their status (done, todo).`,
       ],
       toolsAndLanguages: [
