@@ -29,6 +29,24 @@ export class ProjectsComponent {
       ],
     },
     {
+      name: 'Energy Monitoring System',
+      description: [
+        `Energy Monitoring System is just a descriptive website designed by me for the capstone project that I worked on in my last year at university.`,
+      ],
+      toolsAndLanguages: [
+        'Angular',
+        'TypeScript',
+        'JavaScript',
+        'HTML5',
+        'CSS',
+        'SCSS',
+      ],
+      src: 'https://anamaghradze.github.io/energy-monitoring-system/',
+      images: [
+        'ems.png'
+      ],
+    },
+    {
       name: 'Task Manager',
       description: [
         `The Task Manager is a simple Angular project that consists of two main pages.
